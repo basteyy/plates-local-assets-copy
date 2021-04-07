@@ -1,0 +1,23 @@
+{
+  "name": "basteyy/plates-local-assets-copy",
+  "description": "Plugin for Plates which cache remote assets at local storage",
+  "type": "plugin",
+  "keywords": [
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Sebastian Eiweleit",
+      "email": "sebastian@eiweleit.de"
+    }
+  ],
+  "autoload-dev": {
+    "psr-4": {
+      "basteyy\\PlatesLocalAssetsCopy\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "ext-curl": "*"
+  }
+}
