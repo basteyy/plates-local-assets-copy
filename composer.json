@@ -11,7 +11,7 @@
       "email": "sebastian@eiweleit.de"
     }
   ],
-  "autoload-dev": {
+  "autoload": {
     "psr-4": {
       "basteyy\\PlatesLocalAssetsCopy\\": "src/"
     }
