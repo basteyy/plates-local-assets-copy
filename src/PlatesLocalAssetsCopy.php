@@ -63,15 +63,18 @@ class PlatesLocalAssetsCopy implements ExtensionInterface
     {
         $filename = basename($url);
         $cacheFile = $this->cachePath . '/' . $filename;
+        $filemtime = filemtime($cacheFile);
 
-        if (!file_exists($cacheFile) || filemtime($cacheFile) > $this->cacheDeadline) {
+        if (!file_exists($cacheFile) || $filemtime < $this->cacheDeadline) {
             $this->downloader->download($url);
 
             if ($this->downloader->getStatusCode() !== 200) {
                 throw new Exception('Unable to download remote file');
             }
+
+            $filemtime = time();
         }
 
-        return $this->publicPath . '/' . $filename;
+        return $this->publicPath . '/' . $filename . '?timestamp=' . date('d-m-y_h-i-s', $filemtime);
     }
 }
