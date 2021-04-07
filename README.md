@@ -1,6 +1,6 @@
-# plates-local-assets-copy
+# Plates Local Assets Copy Extension
 
-A plugin for pure php based template engine [plates](https://platesphp.com/) which downloads remote assets to local cache
+A plugin for the pure PHP template engine [plates](https://platesphp.com/). The extension downloads remote assets to local cache and provide the local public URL instead. More or less for local (offline) development. 
 
 ## Setup
 
