@@ -63,9 +63,9 @@ class PlatesLocalAssetsCopy implements ExtensionInterface
     {
         $filename = basename($url);
         $cacheFile = $this->cachePath . '/' . $filename;
-        $filemtime = filemtime($cacheFile);
+        $filemtime = file_exists($cacheFile) ? filemtime($cacheFile) : false;
 
-        if (!file_exists($cacheFile) || $filemtime < $this->cacheDeadline) {
+        if (!$filemtime || $filemtime < $this->cacheDeadline) {
             $this->downloader->download($url);
 
             if ($this->downloader->getStatusCode() !== 200) {
