@@ -51,6 +51,7 @@ class Downloader implements DownloaderInterface
 
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_FILE, $fp);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 
         $data = curl_exec($ch);
         $this->statusCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
