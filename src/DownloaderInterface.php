@@ -7,16 +7,11 @@ namespace basteyy\PlatesLocalAssetsCopy;
 interface DownloaderInterface
 {
     /**
-     * Setup the local path
-     * @param string $localPath
-     */
-    public function setLocalPath(string $localPath) : void;
-
-    /**
      * Process the download of file $url
-     * @param string $url
+     * @param string $url The url of the remote file
+     * @param string $target_location The path (including filename) where the remote file should be stored
      */
-    public function download(string $url) : void;
+    public function download(string $url, string $target_location) : void;
 
     /**
      * Returns the status code
