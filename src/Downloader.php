@@ -1,9 +1,14 @@
 <?php
-
 declare(strict_types=1);
 
+/**
+ * This file `Downloader.php` is part of the package basteyy/plates-local-assets-copy.
+ * @website https://github.com/basteyy/plates-local-assets-copy
+ * @author basteyy <sebastian@xzit.online>
+ * @license The Unlicense
+ * @see https://github.com/basteyy/plates-local-assets-copy/blob/master/LICENSE
+ */
 namespace basteyy\PlatesLocalAssetsCopy;
-
 
 class Downloader implements DownloaderInterface
 {
