@@ -49,8 +49,7 @@ class PlatesLocalAssetsCopy implements ExtensionInterface
 
         $cachePath = rtrim($cachePath, '/');
         $publicPath = rtrim($publicPath, '/');
-
-        $this->downloader->setLocalPath($cachePath);
+        
         $this->cachePath = $cachePath;
         $this->publicPath = $publicPath;
         $this->cacheDeadline = (time() - $cacheTimeout);
