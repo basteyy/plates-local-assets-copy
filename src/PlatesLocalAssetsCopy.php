@@ -24,7 +24,7 @@ use League\Plates\Template\Template;
 class PlatesLocalAssetsCopy implements ExtensionInterface
 {
     /** @var Template $template In case dynamic properties are not allowed, to avoid the exception */
-    protected Template $template;
+    public Template $template;
     private string $cachePath;
     private string $publicPath;
     private int $cacheDeadline;
